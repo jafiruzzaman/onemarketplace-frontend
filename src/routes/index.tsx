@@ -1,4 +1,3 @@
-
 /**
  * @file index.tsx
  * @description Routing setup
@@ -6,75 +5,125 @@
  * @license Apache-2.0
  */
 
-import { createBrowserRouter } from "react-router-dom";
+import {createBrowserRouter} from "react-router-dom";
+import {AuthLayout} from "../components/layouts/auth-layout";
+import {PublicLayout} from "../components/layouts/public-layout";
+import {CandidateLayout} from "../components/layouts/candidate-layout";
+import {RecruiterLayout} from "../components/layouts/recruiter-layout";
 
 export const router = createBrowserRouter([
+  // Public
   {
     path: "/",
-    element: <>Home</>,
+    element: <PublicLayout />,
+    children: [
+      {
+        index: true,
+        element: <>Home</>,
+      },
+      {
+        path: "jobs",
+        element: <>Jobs</>,
+      },
+      {
+        path: "jobs/:jobId",
+        element: <>Job details</>,
+      },
+      {
+        path: "companies",
+        element: <>Companies</>,
+      },
+      {
+        path: "companies/:companyId",
+        element: <>Company details</>,
+      },
+      {
+        path: "blogs",
+        element: <>Blogs</>,
+      },
+      {
+        path: "blogs/:blogId",
+        element: <>Blog details</>,
+      },
+    ],
   },
+
+  // Authentication
   {
-    path: "/auth/sign-up",
-    element: <>Sign Up</>,
-  },
-  {
-    path: "/auth/sign-in",
-    element: <>Sign In</>,
-  },
-  {
-    path: "/jobs",
-    element: <>Jobs</>,
-  },
-  {
-    path: "/companies",
-    element: <>Companies</>,
-  },
-  {
-    path: "/companies/:companyId",
-    element: <>Company details page</>,
-  },
-  {
-    path: "/blogs",
-    element: <>Blogs</>,
-  },
-  {
-    path: "/blogs/:blogId",
-    element: <>Blog details page</>,
+    path: "/auth",
+    element: <AuthLayout />,
+    children: [
+      {
+        path: "sign-up",
+        element: <>Sign Up</>,
+      },
+      {
+        path: "sign-in",
+        element: <>Sign In</>,
+      },
+    ],
   },
 
   // Candidate
   {
-    path: "/candidates",
-    element: <>Candidates</>,
+    path: "/candidate",
+    element: <CandidateLayout />,
+    children: [
+      {
+        index: true,
+        element: <>Candidate Dashboard</>,
+      },
+      {
+        path: "applications",
+        element: <>My Applications</>,
+      },
+      {
+        path: "profile",
+        element: <>Candidate Profile</>,
+      },
+      {
+        path: "settings",
+        element: <>Candidate Settings</>,
+      },
+    ],
   },
+
+  // Recruiter
   {
-    path: "/candidates/:candidateId",
-    element: <>Candidate details page</>,
+    path: "/recruiter",
+    element: <RecruiterLayout />,
+    children: [
+      {
+        index: true,
+        element: <>Recruiter Dashboard</>,
+      },
+      {
+        path: "company",
+        element: <>Company</>,
+      },
+      {
+        path: "company/edit",
+        element: <>Edit Company</>,
+      },
+      {
+        path: "jobs",
+        element: <>Recruiter Jobs</>,
+      },
+      {
+        path: "jobs/create",
+        element: <>Create Job</>,
+      },
+      {
+        path: "jobs/:jobId/edit",
+        element: <>Edit Job</>,
+      },
+      {
+        path: "jobs/:jobId/applications",
+        element: <>Job Applications</>,
+      },
+    ],
   },
-  {
-    path: "/recruiters",
-    element: <>Recruiters</>,
-  },
-  {
-    path: "/recruiter/company/edit",
-    element: <>Edit Company</>,
-  },
-  {
-    path: "/recruiter/jobs/",
-    element: <>Recruiters Jobs</>,
-  },
-  {
-    path: "/recruiter/jobs/create",
-    element: <>Create Job</>,
-  },
-  {
-    path: "/recruiter/jobs/:jobId/edit",
-    element: <>Edit Job</>,
-  },
-  {
-    path: "/recruiter/jobs/:jobId/applications",
-    element: <>Job Applications</>,
-  },
+
   {
     path: "*",
     element: <>Not Found</>,
