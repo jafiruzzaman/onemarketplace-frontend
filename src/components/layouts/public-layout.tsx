@@ -6,13 +6,14 @@
  */
 
 import {Outlet} from "react-router-dom";
+import {Navbar} from "../common/navbar";
 
 export const PublicLayout = () => {
   return (
     <div className="min-h-screen">
       {/*header*/}
       {/*TODO: add navbar here*/}
-      navbar
+      <Navbar />
       <main>
         <Outlet />
       </main>
