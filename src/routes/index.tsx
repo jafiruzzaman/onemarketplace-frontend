@@ -19,6 +19,7 @@ import {Contact} from "../pages/contact/contact-page";
 import {Home} from "../pages/public/home/home-page";
 import {Blog} from "../pages/blogs/blog-page";
 import {BlogDetails} from "../pages/blogs/blog-details";
+import {AdminLayout} from "../components/layouts/admin-layout";
 
 export const router = createBrowserRouter([
   // Public
@@ -143,6 +144,12 @@ export const router = createBrowserRouter([
         element: <>Job Applications</>,
       },
     ],
+  },
+
+  // Admin
+  {
+    path: "/admin",
+    element: <AdminLayout />,
   },
 
   {
