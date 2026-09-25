@@ -10,6 +10,11 @@ import {AuthLayout} from "../components/layouts/auth-layout";
 import {PublicLayout} from "../components/layouts/public-layout";
 import {CandidateLayout} from "../components/layouts/candidate-layout";
 import {RecruiterLayout} from "../components/layouts/recruiter-layout";
+import {SignUp} from "../pages/auth/sign-up";
+import {SignIn} from "../pages/auth/sign-in";
+import {CandidateDashboard} from "../components/dashboard/candidate-dashboard";
+import {ForgotPassword} from "../pages/auth/forgot-password";
+import {ResetPassword} from "../pages/auth/reset-password";
 
 export const router = createBrowserRouter([
   // Public
@@ -55,11 +60,19 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "sign-up",
-        element: <>Sign Up</>,
+        element: <SignUp />,
       },
       {
         path: "sign-in",
-        element: <>Sign In</>,
+        element: <SignIn />,
+      },
+      {
+        path: "forgot-password",
+        element: <ForgotPassword />,
+      },
+      {
+        path: "reset-password",
+        element: <ResetPassword />,
       },
     ],
   },
@@ -71,7 +84,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <>Candidate Dashboard</>,
+        element: <CandidateDashboard />,
       },
       {
         path: "applications",

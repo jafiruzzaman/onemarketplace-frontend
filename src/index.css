@@ -1,5 +1,33 @@
 @import "tailwindcss";
 
+@theme {
+  /* Background */
+  --color-background: #08070b;
+  --color-surface: #0a090e;
+  --color-card: #0c0a10;
+  --color-card-elevated: #100e15;
+  --color-text-label: #d7d2de;
+
+  /* Borders */
+  --color-border: #211c2b;
+  --color-border-hover: #2a2435;
+
+  /* Brand */
+  --color-primary: #b48cff;
+  --color-primary-hover: #c3a5ff;
+  --color-primary-foreground: #100b18;
+
+  /* Text */
+  --color-foreground: #f5f3fa;
+  --color-text-secondary: #b9b2c4;
+  --color-text-muted: #918a9f;
+  --color-text-subtle: #625c6c;
+  --color-text-disabled: #514b59;
+
+  /* Status */
+  --color-success: #34d399;
+}
+
 @layer base {
   * {
     margin: 0;
@@ -10,8 +38,8 @@
   html,
   body {
     overflow-x: hidden;
-    background: #08070b;
-    color: #f5f3fa;
+    background: var(--color-background);
+    color: var(--color-foreground);
   }
 
   body {
