@@ -16,6 +16,7 @@ import {CandidateDashboard} from "../components/dashboard/candidate-dashboard";
 import {ForgotPassword} from "../pages/auth/forgot-password";
 import {ResetPassword} from "../pages/auth/reset-password";
 import {Contact} from "../pages/contact/contact-page";
+import {Home} from "../pages/public/home/home-page";
 
 export const router = createBrowserRouter([
   // Public
@@ -25,7 +26,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <>Home</>,
+        element: <Home />,
       },
       {
         path: "jobs",

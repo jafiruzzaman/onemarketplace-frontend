@@ -7,6 +7,7 @@
 
 import {Outlet} from "react-router-dom";
 import {Navbar} from "../common/navbar";
+import {Footer} from "../common/footer";
 
 export const PublicLayout = () => {
   return (
@@ -18,7 +19,7 @@ export const PublicLayout = () => {
         <Outlet />
       </main>
       {/*footer*/}
-      footer
+      <Footer />
     </div>
   );
 };
