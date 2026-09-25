@@ -5,10 +5,39 @@
  * @license Apache-2.0
  */
 
+import {DashboardStatCard} from "../../components/admin/admin-stats-card";
+import {adminDashboardOverview} from "../../data/admin-data";
+
 export const AdminDashboard = () => {
   return (
-    <main className="flex-1">
-      <div>AdminDashboard </div>
-    </main>
+    <div className="w-full">
+      <div className="mx-auto w-full max-w-7xl px-6 py-6">
+        {/* =====================================================
+            INTRO
+        ====================================================== */}
+        <section className="mb-6">
+          <p className="text-sm text-text-muted">
+            Here's what's happening across OneMarketPlace.
+          </p>
+        </section>
+
+        {/* =====================================================
+            STATISTICS
+        ====================================================== */}
+        <section>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            {adminDashboardOverview.map(stat => (
+              <DashboardStatCard
+                key={stat.title}
+                title={stat.title}
+                value={stat.value}
+                growth={stat.growth}
+                icon={stat.icon}
+              />
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
   );
 };

@@ -21,10 +21,10 @@ export const AdminLayout = () => {
         <AdminHeader />
         <main className="flex-1">
           <Outlet />
+          {/* footer */}
         </main>
+        <DashboardFooter />
       </div>
-      {/* footer */}
-      <DashboardFooter />
     </div>
   );
 };
