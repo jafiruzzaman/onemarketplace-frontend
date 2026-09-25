@@ -15,6 +15,7 @@ import {SignIn} from "../pages/auth/sign-in";
 import {CandidateDashboard} from "../components/dashboard/candidate-dashboard";
 import {ForgotPassword} from "../pages/auth/forgot-password";
 import {ResetPassword} from "../pages/auth/reset-password";
+import {Contact} from "../pages/contact/contact-page";
 
 export const router = createBrowserRouter([
   // Public
@@ -49,6 +50,10 @@ export const router = createBrowserRouter([
       {
         path: "blogs/:blogId",
         element: <>Blog details</>,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
       },
     ],
   },
