@@ -28,7 +28,7 @@ export const adminSidebar = [
       {
         title: "Overview",
         icon: Rocket01Icon,
-        path: "overview",
+        path: "",
       },
       {
         title: "Users",
