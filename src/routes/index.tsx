@@ -17,6 +17,8 @@ import {ForgotPassword} from "../pages/auth/forgot-password";
 import {ResetPassword} from "../pages/auth/reset-password";
 import {Contact} from "../pages/contact/contact-page";
 import {Home} from "../pages/public/home/home-page";
+import {Blog} from "../pages/blogs/blog-page";
+import {BlogDetails} from "../pages/blogs/blog-details";
 
 export const router = createBrowserRouter([
   // Public
@@ -46,11 +48,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "blogs",
-        element: <>Blogs</>,
+        element: <Blog />,
       },
       {
-        path: "blogs/:blogId",
-        element: <>Blog details</>,
+        path: "blog/:slug",
+        element: <BlogDetails />,
       },
       {
         path: "contact",
