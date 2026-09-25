@@ -12,7 +12,6 @@ import {HugeiconsIcon} from "@hugeicons/react";
 export const Contact = () => {
   return (
     <main className="min-h-screen bg-background text-foreground">
-
       {/* Hero */}
       <section className="relative overflow-hidden my-16">
         {/* Background glow */}

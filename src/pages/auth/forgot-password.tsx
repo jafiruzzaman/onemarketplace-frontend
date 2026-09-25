@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import {
   ArrowLeft01Icon,
   ArrowRight01Icon,
   Mail01Icon,
   Key01Icon,
 } from "@hugeicons/core-free-icons";
-import { HugeiconsIcon } from "@hugeicons/react";
+import {HugeiconsIcon} from "@hugeicons/react";
 
 export const ForgotPassword = () => {
   return (
@@ -53,8 +53,8 @@ export const ForgotPassword = () => {
               </h1>
 
               <p className="mt-3 text-sm leading-6 text-text-muted">
-                No worries. Enter the email address associated with your
-                account and we'll send you a link to reset your password.
+                No worries. Enter the email address associated with your account
+                and we'll send you a link to reset your password.
               </p>
             </div>
 
@@ -92,7 +92,6 @@ export const ForgotPassword = () => {
                 className="group flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary text-sm font-semibold text-primary-foreground transition hover:bg-primary-hover active:scale-[0.99]"
               >
                 Send reset link
-
                 <HugeiconsIcon
                   icon={ArrowRight01Icon}
                   size={18}
@@ -112,7 +111,6 @@ export const ForgotPassword = () => {
                   size={16}
                   className="transition-transform group-hover:-translate-x-0.5"
                 />
-
                 Back to sign in
               </Link>
             </div>

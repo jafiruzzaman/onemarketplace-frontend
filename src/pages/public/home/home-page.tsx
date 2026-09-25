@@ -44,8 +44,8 @@ export const Home = () => {
             {/* Description */}
             <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-text-muted sm:text-base">
               OneMarketPlace connects talented people with great companies.
-              Discover jobs, build your professional profile, and take the
-              next step in your career.
+              Discover jobs, build your professional profile, and take the next
+              step in your career.
             </p>
 
             {/* Search */}
@@ -96,17 +96,19 @@ export const Home = () => {
             <div className="mt-5 flex flex-wrap items-center justify-center gap-2 text-xs text-text-subtle">
               <span>Popular:</span>
 
-              {["Frontend Developer", "Backend Developer", "UI/UX Designer"].map(
-                (item) => (
-                  <Link
-                    key={item}
-                    to="/jobs"
-                    className="rounded-full border border-border px-3 py-1.5 transition hover:border-primary/30 hover:bg-primary/5 hover:text-primary"
-                  >
-                    {item}
-                  </Link>
-                ),
-              )}
+              {[
+                "Frontend Developer",
+                "Backend Developer",
+                "UI/UX Designer",
+              ].map(item => (
+                <Link
+                  key={item}
+                  to="/jobs"
+                  className="rounded-full border border-border px-3 py-1.5 transition hover:border-primary/30 hover:bg-primary/5 hover:text-primary"
+                >
+                  {item}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
@@ -134,7 +136,7 @@ export const Home = () => {
               value: "95%",
               label: "Hiring success",
             },
-          ].map((stat) => (
+          ].map(stat => (
             <div
               key={stat.label}
               className="px-4 py-7 text-center sm:px-6 sm:py-8"
@@ -204,9 +206,7 @@ export const Home = () => {
               <HugeiconsIcon icon={UserGroupIcon} size={23} />
             </div>
 
-            <h3 className="mt-6 text-xl font-semibold">
-              Build your profile
-            </h3>
+            <h3 className="mt-6 text-xl font-semibold">Build your profile</h3>
 
             <p className="mt-3 text-sm leading-6 text-text-muted">
               Showcase your skills, experience, and achievements to potential
@@ -311,7 +311,7 @@ export const Home = () => {
                 type: "Contract",
                 salary: "$2,000 – $3,500",
               },
-            ].map((job) => (
+            ].map(job => (
               <Link
                 key={job.title}
                 to="/jobs"
@@ -478,7 +478,7 @@ export const Home = () => {
               "Simple applications",
               "Career-focused tools",
               "Built for growth",
-            ].map((item) => (
+            ].map(item => (
               <div
                 key={item}
                 className="flex items-center gap-3 rounded-2xl border border-border bg-card p-4"
