@@ -23,9 +23,8 @@ import {
 
 export const adminSidebar = [
   {
-    path: "/",
     title: "Main",
-    chiledren: [
+    children: [
       {
         title: "Overview",
         icon: Rocket01Icon,
@@ -48,15 +47,14 @@ export const adminSidebar = [
       },
     ],
   },
-  // Marketplace
+
   {
-    path: "/marketplace",
     title: "Marketplace",
-    chiledren: [
+    children: [
       {
-        title: "Payment",
+        title: "Payments",
         icon: Invoice02Icon,
-        path: "payment",
+        path: "payments",
       },
       {
         title: "Connections",
@@ -70,11 +68,10 @@ export const adminSidebar = [
       },
     ],
   },
-  // Content
+
   {
-    path: "/content",
     title: "Content",
-    chiledren: [
+    children: [
       {
         title: "Blog",
         icon: AiSparklesIcon,
@@ -92,25 +89,24 @@ export const adminSidebar = [
       },
     ],
   },
-  // Systems
+
   {
-    path: "/systems",
     title: "Systems",
-    chiledren: [
+    children: [
       {
         title: "Analytics",
         icon: AnalyticsUpIcon,
-        path: "/analytics",
+        path: "analytics",
       },
       {
         title: "Audit Logs",
         icon: ComputerChartUpIcon,
-        path: "/audit-logs",
+        path: "audit-logs",
       },
       {
         title: "Settings",
         icon: SettingsIcon,
-        path: "/settings",
+        path: "settings",
       },
     ],
   },
