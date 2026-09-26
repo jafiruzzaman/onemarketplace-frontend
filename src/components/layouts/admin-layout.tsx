@@ -1,18 +1,29 @@
+/**
+ * @file admin-layout.tsx
+ * @description AdminLayout component
+ * @author Mohammad-Jafiruzzaman
+ * @license Apache-2.0
+ * @returns AdminLayout
+ */
+
 import {Outlet} from "react-router-dom";
-import {AdminSidebar} from "../admin/admin-sidebar";
-import {AdminNavbar} from "../admin/admin-topbar";
+import {DashboardFooter} from "../admin/admin-footer";
+import {Sidebar} from "../admin/admin-sidebar";
+import {AdminHeader} from "../admin/admin-header";
 
 export const AdminLayout = () => {
   return (
-    <div className="flex min-h-screen bg-background text-foreground">
-      {/*sidebar*/}
-      <AdminSidebar />
-      {/*main*/}
-      <div className="flex min-w-0 flex-1 flex-col">
-        <AdminNavbar />
-        <main className="flex-1 overflow-y-auto">
+    <div className="bg-background flex min-h-screen">
+      {/* sidebar */}
+      <Sidebar />
+      {/* main content */}
+      <div className="flex-1 flex flex-col min-w-0">
+        <AdminHeader />
+        <main className="flex-1">
           <Outlet />
+          {/* footer */}
         </main>
+        <DashboardFooter />
       </div>
     </div>
   );

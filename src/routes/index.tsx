@@ -16,6 +16,10 @@ import {Contact} from "../pages/contact/contact-page";
 import {Home} from "../pages/public/home/home-page";
 import {Blog} from "../pages/blogs/blog-page";
 import {BlogDetails} from "../pages/blogs/blog-details";
+import {AdminDashboard} from "../pages/admin/overview";
+import {AdminLayout} from "../components/layouts/admin-layout";
+import {AdminBlog} from "../pages/admin/blog";
+import {CreateBlog} from "../pages/admin/create-blog";
 
 export const router = createBrowserRouter([
   // Public
@@ -82,7 +86,25 @@ export const router = createBrowserRouter([
     ],
   },
   // TODO: add recruiter candidate and admin routes
-
+  {
+    path: "/admin",
+    element: <AdminLayout />,
+    children: [
+      {
+        path: "",
+        index: true,
+        element: <AdminDashboard />,
+      },
+      {
+        path: "blog",
+        element: <AdminBlog />,
+      },
+      {
+        path: "blog/create",
+        element: <CreateBlog />,
+      },
+    ],
+  },
   {
     path: "*",
     element: <>Not Found</>,
