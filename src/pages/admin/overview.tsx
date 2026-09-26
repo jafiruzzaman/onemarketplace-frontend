@@ -5,6 +5,7 @@
  * @license Apache-2.0
  */
 
+import {AdminOverviewChart} from "../../components/admin/admin-overview-charts";
 import {DashboardStatCard} from "../../components/admin/admin-stats-card";
 import {adminDashboardOverview} from "../../data/admin-data";
 
@@ -36,6 +37,9 @@ export const AdminDashboard = () => {
               />
             ))}
           </div>
+        </section>
+        <section>
+          <AdminOverviewChart />
         </section>
       </div>
     </div>

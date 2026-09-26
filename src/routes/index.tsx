@@ -18,6 +18,8 @@ import {Blog} from "../pages/blogs/blog-page";
 import {BlogDetails} from "../pages/blogs/blog-details";
 import {AdminDashboard} from "../pages/admin/overview";
 import {AdminLayout} from "../components/layouts/admin-layout";
+import {AdminBlog} from "../pages/admin/blog";
+import {CreateBlog} from "../pages/admin/create-blog";
 
 export const router = createBrowserRouter([
   // Public
@@ -92,6 +94,14 @@ export const router = createBrowserRouter([
         path: "",
         index: true,
         element: <AdminDashboard />,
+      },
+      {
+        path: "blog",
+        element: <AdminBlog />,
+      },
+      {
+        path: "blog/create",
+        element: <CreateBlog />,
       },
     ],
   },
