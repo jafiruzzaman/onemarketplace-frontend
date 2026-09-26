@@ -21,7 +21,7 @@ import {Editor} from "../../components/common/editor";
 
 export const CreateBlog = () => {
   const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
+  const [content] = useState("");
   const [tagInput, setTagInput] = useState("");
   const [tags, setTags] = useState<string[]>([]);
   const [isPublished, setIsPublished] = useState(false);
